@@ -1,70 +1,49 @@
-📊 DataPilotX — AI-Powered Analytics Platform
+# 📊 DataPilotX — AI-Powered Analytics Platform
 
 DataPilotX is a full-stack AI-powered analytics application that allows users to upload CSV datasets and query them using natural language.
 It combines modern backend engineering, large language models, and a clean frontend to deliver business-friendly insights with explainable logic.
 
+---
 
+## 🚀 Key Features
 
-🚀 Key Features
+- 📁 CSV Upload & Dataset Management
+- 🤖 Natural Language Querying (Ask AI)
+- 🧠 LLM-powered Analytics using Groq + LangChain
+- 🔍 Explainable AI
+  - Final business answer
+  - Optional reasoning
+  - Optional computation code (Python / Pandas)
+- 📊 Dataset Dashboard & Preview
+- 🎨 Modern, Clean Frontend UI (React + Tailwind)
+- ⚡ FastAPI Backend (high performance)
+- 🛡️ Robust error handling & safe fallbacks
 
-📁 CSV Upload & Dataset Management
+---
 
-🤖 Natural Language Querying (Ask AI)
+## 🧱 Tech Stack
 
-🧠 LLM-powered Analytics using Groq + LangChain
+### Backend
+- FastAPI
+- Python 3.14
+- LangChain
+- Groq LLM (free tier)
+- Pandas
+- Uvicorn
 
-🔍 Explainable AI
+### Frontend
+- React (Vite)
+- Tailwind CSS
+- Modern component-based architecture
 
-Final business answer
+### Tooling
+- Git & GitHub
+- Local development (macOS compatible)
 
-Optional reasoning
+---
 
-Optional computation code (Python / Pandas)
+## 🏗️ Project Architecture
 
-
-
-📊 Dataset Dashboard & Preview
-
-🎨 Modern, Clean Frontend UI (React + Tailwind)
-
-⚡ FastAPI Backend (high performance)
-
-🛡️ Robust error handling & safe fallbacks
-
-
-
-🧱 Tech Stack
-Backend
-
-FastAPI
-
-Python 3.14
-
-LangChain
-
-Groq LLM (free tier)
-
-Pandas
-
-Uvicorn
-
-Frontend
-
-React (Vite)
-
-Tailwind CSS
-
-Modern component-based architecture
-
-Tooling
-
-Git & GitHub
-
-Local development (macOS compatible)
-
-
-
-🏗️ Project Architecture
 DataPilotX/
 ├── backend/
 │   ├── app/
@@ -84,156 +63,111 @@ DataPilotX/
 │
 └── README.md
 
+---
 
+## 🧠 How It Works
 
+1. User uploads a CSV file.
+2. Backend parses and stores the dataset.
+3. User asks a question in natural language.
+4. The system:
+   - Selects the latest dataset (or a specified one)
+   - Sends a context-aware prompt to the LLM
+   - Receives structured output:
+     - Answer
+     - Reasoning
+     - Code
+5. Frontend displays:
+   - A clean answer by default
+   - An expandable section for reasoning & code
 
-🧠 How It Works
+---
 
-User uploads a CSV file.
+## ⚙️ Setup & Run Locally
 
-Backend parses and stores the dataset.
-
-User asks a question in natural language.
-
-The system:
-
-Selects the latest dataset (or a specified one)
-
-Sends a context-aware prompt to the LLM
-
-Receives structured output:
-
-Answer
-
-Reasoning
-
-Code
-
-Frontend displays:
-
-A clean answer by default
-
-An expandable section for reasoning & code
-
-
-
-⚙️ Setup & Run Locally
-1️⃣ Clone the Repository
+### Clone the Repository
 git clone https://github.com/rahulgithubral/DataPilotX.git
 cd DataPilotX
 
+---
 
-
-2️⃣ Backend Setup
+### Backend Setup
 cd backend
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-
 Create a .env file:
-
 GROQ_API_KEY=your_groq_api_key_here
 
-
-
-
-Run the backend:
-
+Run backend:
 uvicorn app.main:app --reload
 
-
-
-
 Backend runs at:
-
 http://127.0.0.1:8000
 
+---
 
-
-3️⃣ Frontend Setup
-
+### Frontend Setup
 Open a new terminal:
-
 cd frontend
 npm install
 npm run dev
 
-
-
-
 Frontend runs at:
-
 http://localhost:5173
 
-🧪 Example Questions
+---
 
-Which category has the highest total sales?
+## 🧪 Example Questions
 
-Show sales trends over time.
+- Which category has the highest total sales?
+- Show sales trends over time.
+- Summarise this dataset.
+- Which product performed best?
 
-Summarise this dataset.
+---
 
-Which product performed best?
+## 💡 Design Philosophy
 
+- Business-first answers
+- Explainable AI by design
+- Clean separation of backend & frontend
+- Minimal but extensible architecture
+- Interview-ready and real-world focused
 
+---
 
+## 🚧 Future Improvements
 
-💡 Design Philosophy
+- Automatic chart generation
+- Dark mode
+- Export insights as reports
+- Multi-dataset comparison
+- Deployment (Docker / Cloud)
 
-Business-first answers
+---
 
-Explainable AI by design
+## 👤 Author
 
-Clean separation of backend & frontend
-
-Minimal but extensible architecture
-
-Interview-ready and real-world focused
-
-
-
-
-🚧 Future Improvements
-
-📊 Automatic chart generation
-
-🌙 Dark mode
-
-📄 Export insights as reports
-
-🧠 Multi-dataset comparison
-
-☁️ Deployment (Docker / Cloud)
-
-
-
-
-👤 Author
-
-Rahul R S
-
+Rahul R S  
 Software / AI Enthusiast
 
+---
 
-
-
-⭐ Why This Project Matters
+## ⭐ Why This Project Matters
 
 This project demonstrates:
-
-Full-stack engineering
-
-LLM integration
-
-API design
-
-Frontend UX thinking
-
-Explainable AI principles
+- Full-stack engineering
+- LLM integration
+- API design
+- Frontend UX thinking
+- Explainable AI principles
 
 It is built to reflect real-world product engineering, not just a demo.
 
-📜 License
+---
+
+## 📜 License
 
 MIT License
