@@ -1,0 +1,30 @@
+{
+  "107d4b0e-e835-4b89-848b-db603a9a6e32": {
+    "dataset_id": "107d4b0e-e835-4b89-848b-db603a9a6e32",
+    "name": "sample.csv",
+    "rows": 5,
+    "columns": 4,
+    "path": "/Users/rahulrs/Documents/DataPilotX/backend/data/107d4b0e-e835-4b89-848b-db603a9a6e32.csv"
+  },
+  "ef0a2d5c-06a4-4425-8456-7debb660748d": {
+    "dataset_id": "ef0a2d5c-06a4-4425-8456-7debb660748d",
+    "name": "sample.csv",
+    "rows": 5,
+    "columns": 4,
+    "path": "/Users/rahulrs/Documents/DataPilotX/backend/data/ef0a2d5c-06a4-4425-8456-7debb660748d.csv"
+  },
+  "1311dea4-4c4b-4cfb-9636-f1173ab549f3": {
+    "dataset_id": "1311dea4-4c4b-4cfb-9636-f1173ab549f3",
+    "name": "sample.csv",
+    "rows": 5,
+    "columns": 4,
+    "path": "/Users/rahulrs/Documents/DataPilotX/backend/data/1311dea4-4c4b-4cfb-9636-f1173ab549f3.csv"
+  },
+  "971c694f-9364-4b2e-9d60-158460c99d21": {
+    "dataset_id": "971c694f-9364-4b2e-9d60-158460c99d21",
+    "name": "test_data_random.csv",
+    "rows": 100,
+    "columns": 5,
+    "path": "/Users/rahulrs/Documents/DataPilotX/backend/data/971c694f-9364-4b2e-9d60-158460c99d21.csv"
+  }
+}
