@@ -17,7 +17,7 @@ Final business answer
 
 Optional reasoning
 
-Optional computation code (Python/Pandas)
+Optional computation code (Python / Pandas)
 
 📊 Dataset Dashboard & Preview
 
@@ -25,7 +25,7 @@ Optional computation code (Python/Pandas)
 
 ⚡ FastAPI Backend (high performance)
 
-�� Robust error handling & safe fallbacks
+🛡️ Robust error handling & safe fallbacks
 
 🧱 Tech Stack
 Backend
@@ -54,18 +54,17 @@ Tooling
 
 Git & GitHub
 
-Local development (MacOS compatible)
+Local development (macOS compatible)
 
 🏗️ Project Architecture
 DataPilotX/
-│
 ├── backend/
 │   ├── app/
-│   │   ├── main.py          # FastAPI entry point
+│   │   ├── main.py           # FastAPI entry point
 │   │   ├── routers/
-│   │   │   └── qa.py        # AI question answering
+│   │   │   └── qa.py         # AI question answering
 │   │   ├── dataset_store.py # In-memory dataset management
-│   │   └── llm_factory.py  # LLM provider setup (Groq/Dummy)
+│   │   └── llm_factory.py   # LLM provider setup (Groq / Dummy)
 │   └── data/
 │
 ├── frontend/
@@ -87,9 +86,9 @@ User asks a question in natural language.
 
 The system:
 
-Selects the latest dataset (or specified one)
+Selects the latest dataset (or a specified one)
 
-Sends context-aware prompt to the LLM
+Sends a context-aware prompt to the LLM
 
 Receives structured output:
 
@@ -101,12 +100,12 @@ Code
 
 Frontend displays:
 
-Clean answer by default
+A clean answer by default
 
-Expandable reasoning & code section
+An expandable section for reasoning & code
 
 ⚙️ Setup & Run Locally
-1️⃣ Clone Repository
+1️⃣ Clone the Repository
 git clone https://github.com/rahulgithubral/DataPilotX.git
 cd DataPilotX
 
@@ -122,7 +121,7 @@ Create a .env file:
 GROQ_API_KEY=your_groq_api_key_here
 
 
-Run backend:
+Run the backend:
 
 uvicorn app.main:app --reload
 
@@ -144,11 +143,11 @@ Frontend runs at:
 
 http://localhost:5173
 
-�� Example Questions
+🧪 Example Questions
 
 Which category has the highest total sales?
 
-Show sales trend over time.
+Show sales trends over time.
 
 Summarise this dataset.
 
@@ -158,7 +157,7 @@ Which product performed best?
 
 Business-first answers
 
-Explainable AI
+Explainable AI by design
 
 Clean separation of backend & frontend
 
@@ -172,7 +171,7 @@ Interview-ready and real-world focused
 
 🌙 Dark mode
 
-�� Export insights as reports
+📄 Export insights as reports
 
 🧠 Multi-dataset comparison
 
