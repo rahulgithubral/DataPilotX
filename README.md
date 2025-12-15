@@ -150,7 +150,7 @@ Which category has the highest total sales?
 
 Show sales trend over time.
 
-Summarize this dataset.
+Summarise this dataset.
 
 Which product performed best?
 
@@ -180,7 +180,7 @@ Interview-ready and real-world focused
 
 👤 Author
 
-Rahul R
+Rahul R S
 Software / AI Enthusiast
 
 ⭐ Why This Project Matters
