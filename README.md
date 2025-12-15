@@ -3,6 +3,8 @@
 DataPilotX is a full-stack AI-powered analytics application that allows users to upload CSV datasets and query them using natural language.
 It combines modern backend engineering, large language models, and a clean frontend to deliver business-friendly insights with explainable logic.
 
+
+
 🚀 Key Features
 
 📁 CSV Upload & Dataset Management
@@ -19,6 +21,8 @@ Optional reasoning
 
 Optional computation code (Python / Pandas)
 
+
+
 📊 Dataset Dashboard & Preview
 
 🎨 Modern, Clean Frontend UI (React + Tailwind)
@@ -26,6 +30,8 @@ Optional computation code (Python / Pandas)
 ⚡ FastAPI Backend (high performance)
 
 🛡️ Robust error handling & safe fallbacks
+
+
 
 🧱 Tech Stack
 Backend
@@ -56,6 +62,8 @@ Git & GitHub
 
 Local development (macOS compatible)
 
+
+
 🏗️ Project Architecture
 DataPilotX/
 ├── backend/
@@ -75,6 +83,9 @@ DataPilotX/
 │   └── tailwind.config.js
 │
 └── README.md
+
+
+
 
 🧠 How It Works
 
@@ -104,10 +115,14 @@ A clean answer by default
 
 An expandable section for reasoning & code
 
+
+
 ⚙️ Setup & Run Locally
 1️⃣ Clone the Repository
 git clone https://github.com/rahulgithubral/DataPilotX.git
 cd DataPilotX
+
+
 
 2️⃣ Backend Setup
 cd backend
@@ -121,14 +136,20 @@ Create a .env file:
 GROQ_API_KEY=your_groq_api_key_here
 
 
+
+
 Run the backend:
 
 uvicorn app.main:app --reload
 
 
+
+
 Backend runs at:
 
 http://127.0.0.1:8000
+
+
 
 3️⃣ Frontend Setup
 
@@ -137,6 +158,8 @@ Open a new terminal:
 cd frontend
 npm install
 npm run dev
+
+
 
 
 Frontend runs at:
@@ -153,6 +176,9 @@ Summarise this dataset.
 
 Which product performed best?
 
+
+
+
 💡 Design Philosophy
 
 Business-first answers
@@ -164,6 +190,9 @@ Clean separation of backend & frontend
 Minimal but extensible architecture
 
 Interview-ready and real-world focused
+
+
+
 
 🚧 Future Improvements
 
@@ -177,11 +206,17 @@ Interview-ready and real-world focused
 
 ☁️ Deployment (Docker / Cloud)
 
+
+
+
 👤 Author
 
 Rahul R S
 
 Software / AI Enthusiast
+
+
+
 
 ⭐ Why This Project Matters
 
