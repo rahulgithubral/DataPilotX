@@ -180,6 +180,7 @@ Interview-ready and real-world focused
 👤 Author
 
 Rahul R S
+
 Software / AI Enthusiast
 
 ⭐ Why This Project Matters
