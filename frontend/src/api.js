@@ -1,17 +1,17 @@
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = import.meta.env.VITE_API_BASE_URL;
 
 export const uploadDataset = async (file) => {
   const formData = new FormData();
-  formData.append('file', file);
+  formData.append("file", file);
 
   const response = await fetch(`${API_BASE}/upload`, {
-    method: 'POST',
+    method: "POST",
     body: formData,
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ detail: 'Upload failed' }));
-    throw new Error(error.detail || 'Upload failed');
+    const error = await response.json().catch(() => ({ detail: "Upload failed" }));
+    throw new Error(error.detail || "Upload failed");
   }
 
   return response.json();
@@ -21,7 +21,7 @@ export const getDashboard = async () => {
   const response = await fetch(`${API_BASE}/dashboard`);
 
   if (!response.ok) {
-    throw new Error('Failed to fetch dashboard');
+    throw new Error("Failed to fetch dashboard");
   }
 
   return response.json();
@@ -34,18 +34,17 @@ export const askQuestion = async (question, datasetId = null) => {
   }
 
   const response = await fetch(`${API_BASE}/qa`, {
-    method: 'POST',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(body),
   });
 
   if (!response.ok) {
-    const error = await response.json().catch(() => ({ detail: 'QA request failed' }));
-    throw new Error(error.detail || 'QA request failed');
+    const error = await response.json().catch(() => ({ detail: "QA request failed" }));
+    throw new Error(error.detail || "QA request failed");
   }
 
   return response.json();
 };
-
