@@ -6,7 +6,7 @@ from typing import Any
 import pandas as pd
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import JSONResponse
-from starlette.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.analysis import build_dashboard
 from app.config import get_settings
@@ -24,10 +24,11 @@ from app.routers.qa import router as qa_router
 
 app = FastAPI(title="DataPilotX Backend", version="1.0.0")
 
+# ✅ FIXED CORS (PRODUCTION-SAFE)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
-    allow_credentials=True,
+    allow_credentials=False,  # MUST be False
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -47,7 +48,7 @@ async def upload_dataset(file: UploadFile = File(...)) -> UploadResponse:
     content = await file.read()
     try:
         frame = pd.read_csv(io.BytesIO(content))
-    except Exception as exc:  # pragma: no cover - pandas parsing
+    except Exception as exc:
         raise HTTPException(status_code=400, detail=f"Failed to parse CSV: {exc}") from exc
 
     record = DATA_STORE.add_dataset(frame, name=file.filename)
@@ -84,33 +85,38 @@ async def agent_insights(dataset_id: str) -> AgentInsightsResponse:
     llm = get_llm()
     from app.config import LLM_PROVIDER
     provider = LLM_PROVIDER.lower()
-    
+
     def _invoke_llm(llm: Any, prompt: str) -> str:
-        """Invoke LLM and extract text response."""
         if hasattr(llm, "invoke"):
             response = llm.invoke(prompt)
             if hasattr(response, "content"):
                 return str(response.content)
             return str(response)
-        if hasattr(llm, "__call__"):
+        if callable(llm):
             result = llm(prompt)
             return str(result) if result else ""
-        raise ValueError(f"LLM object {type(llm)} does not support invoke() or __call__()")
-    
+        raise ValueError(f"LLM object {type(llm)} does not support invoke() or call")
+
     predictor = lambda prompt: _invoke_llm(llm, prompt)
     insights = generate_insights(record.frame, predictor, provider)
-    return AgentInsightsResponse(dataset_id=record.dataset_id, provider=provider, insights=insights)
+
+    return AgentInsightsResponse(
+        dataset_id=record.dataset_id,
+        provider=provider,
+        insights=insights,
+    )
 
 
 @app.get("/health")
 async def health() -> JSONResponse:
     settings = get_settings()
-    body: dict[str, Any] = {
-        "status": "ok",
-        "llm_provider": settings.LLM_PROVIDER,
-        "datasets_loaded": len(DATA_STORE.list()),
-    }
-    return JSONResponse(body)
+    return JSONResponse(
+        {
+            "status": "ok",
+            "llm_provider": settings.LLM_PROVIDER,
+            "datasets_loaded": len(DATA_STORE.list()),
+        }
+    )
 
 
 __all__ = ["app"]
