@@ -1,71 +1,82 @@
 # 📊 DataPilotX — AI-Powered Analytics Platform
 
-DataPilotX is a full-stack AI-powered analytics application that allows users to upload CSV datasets and query them using natural language.
-It combines modern backend engineering, large language models, and a clean frontend to deliver business-friendly insights with explainable logic.
+**DataPilotX** is a full-stack AI-powered analytics platform that allows users to upload CSV datasets and query them using natural language.  
+It combines modern backend engineering, large language models, and a clean frontend to deliver **business-friendly insights with explainable logic**.
+
+---
+
+## 🔗 Live Links
+
+- 🌐 **Live Demo (Frontend):** https://data-pilotx.vercel.app  
+- ⚙️ **Backend API:** https://datapilotx-backend.onrender.com  
+- 📦 **Source Code:** https://github.com/rahulgithubral/DataPilotX  
+
+> Deployed using **Vercel (Frontend)** and **Render (Backend)**.
 
 ---
 
 ## 🚀 Key Features
 
-- 📁 CSV Upload & Dataset Management
-- 🤖 Natural Language Querying (Ask AI)
-- 🧠 LLM-powered Analytics using Groq + LangChain
-- 🔍 Explainable AI
-  - Final business answer
-  - Optional reasoning
-  - Optional computation code (Python / Pandas)
-- 📊 Dataset Dashboard & Preview
-- 🎨 Modern, Clean Frontend UI (React + Tailwind)
-- ⚡ FastAPI Backend (high performance)
-- 🛡️ Robust error handling & safe fallbacks
+- 📁 CSV Upload & Dataset Management  
+- 🤖 Natural Language Querying (**Ask AI**)  
+- 🧠 LLM-powered analytics using **Groq + LangChain**  
+- 🔍 **Explainable AI**
+  - Clear business answer  
+  - Optional reasoning  
+  - Optional computation code (Python / Pandas)  
+- 📊 Dataset dashboard & preview  
+- 🎨 Modern, clean UI (React + Tailwind)  
+- ⚡ High-performance FastAPI backend  
+- 🛡️ Robust error handling with safe LLM fallbacks  
 
 ---
 
 ## 🧱 Tech Stack
 
 ### Backend
-- FastAPI
-- Python 3.14
-- LangChain
-- Groq LLM (free tier)
-- Pandas
-- Uvicorn
+- FastAPI  
+- Python 3.14  
+- LangChain  
+- Groq LLM (free tier)  
+- Pandas  
+- Uvicorn  
 
 ### Frontend
-- React (Vite)
-- Tailwind CSS
-- Modern component-based architecture
+- React (Vite)  
+- Tailwind CSS  
+- Component-based architecture  
 
 ### Tooling
-- Git & GitHub
-- Local development (macOS compatible)
+- Git & GitHub  
+- Local development (macOS compatible)  
 
 ---
 
 ## 🏗️ Project Architecture
-
+<pre>
 DataPilotX/
 ├── backend/
 │   ├── app/
-│   │   ├── main.py           # FastAPI entry point
+│   │   ├── main.py            # FastAPI entry point
 │   │   ├── routers/
-│   │   │   └── qa.py         # AI question answering
-│   │   ├── dataset_store.py # In-memory dataset management
-│   │   └── llm_factory.py   # LLM provider setup (Groq / Dummy)
+│   │   │   └── qa.py          # AI question answering
+│   │   ├── dataset_store.py  # In-memory dataset management
+│   │   └── llm_factory.py    # LLM provider setup (Groq / Dummy)
 │   └── data/
 │
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   └── AskAI.jsx
 │   │   └── pages/
 │   └── tailwind.config.js
 │
 └── README.md
+</pre>
 
----
 
-## 🧠 How It Works
+
+
+ 🧠 How It Works
 
 1. User uploads a CSV file.
 2. Backend parses and stores the dataset.
@@ -168,6 +179,4 @@ It is built to reflect real-world product engineering, not just a demo.
 
 ---
 
-## 📜 License
 
-MIT License
